@@ -1,24 +1,22 @@
 <!-- _coverpage.md --> 
 
-![logo](_media/icon.svg)
+<img src="_media/author/author.jpg" alt="logo" style="width:100px;border-radius:50px" />
 
-# docsify 3.5
 
-> 一个神奇的文档网站生成器。
 
-- 简单、轻便 (压缩后 ~21kB)
+# 流柚の博客
 
-- 无需生成 html 文件
+> 一个用于记录学习和技术分享的个人博客
 
-- 众多主题 
+[开始](#介绍)
 
-[GitHub](https://github.com/docsifyjs/docsify/)  [Get Started](#HOME)
+<!-- 背景色 ![color](#f2f2f2) -->
+
+
 
 
 
 <!-- 背景图片 ![](_media/bg.png)-->
 
-
-
-<!-- 背景色 ![color](#f2f2f2) -->
+![](_media/bg.jpg)
 
