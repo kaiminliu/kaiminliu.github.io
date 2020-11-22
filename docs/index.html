@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/buble.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dark.css">
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/pure.css"> -->
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/dolphin.css"> -->
+</head>
+<body>
+  <!-- <nav> -->
+    <!-- <a href="#/">EN</a> -->
+    <!-- <a href="#/zh-cn/">中文</a> -->
+  <!-- </nav> -->
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: '入门docsify', // 文档标题，会显示在侧边栏顶部。
+	  nameLink: '/',
+	  logo: '/_media/icon.svg', // 在侧边栏中出现的网站图标，你可以使用CSS来更改大小
+	  el: '#app',
+	  loadSidebar: true, // 侧边栏 _sidebar.md
+	  autoHeader: true, // ?????? 同时设置 loadSidebar 和 autoHeader 后，可以根据 _sidebar.md 的内容自动为每个页面增加标题。
+	  <!-- hideSidebar: true, // 隐藏侧边栏 -->
+	  loadNavbar: true, // 导航栏 _navbar.md
+	  mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏。
+	  coverpage: true, // 封面 _coverpage.md
+	  onlyCover: false, // 只在访问主页时加载封面
+	  subMaxLevel: 4, // 开启目录
+	  alias: { // 路由别名支持正则。 避免回退(加载_sidebar.md -> 先目录下，如果目录下不存在，再回退到根目录)
+		'/.*/_sidebar.md': '/_sidebar.md' // 直接根目录
+	  },
+	  repo: 'kaiminliu/liuyou_blog', // github 仓库挂件
+	  cornerExternalLinkTarget: '_self', // 右上角链接的打开方式 default: '_blank'
+	  <!-- auto2top: true, // 切换页面后是否自动跳转到页面顶部 -->
+	  // basePath: '/path/', // 文档加载的根路径，可以是二级路径或者是其他域名的路径
+	  themeColor: '#3F51B5', // 主题色
+	  formatUpdated: '{YYYY}/{MM}/{DD} {HH}:{mm}:{ss}',// 通过 {docsify-updated} 变量显示文档更新日期.
+	  externalLinkTarget: '_self', // 外部链接的打开方式 default: '_blank'
+	  noCompileLinks: ['/foo', '/bar/.*'], // 不希望 docsify 处理我们的链接
+	
+	  /* 插件 */
+	  // 全文搜索
+	   // 完整配置参数
+		/*
+			search: {
+			  maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+			  paths: [], // or 'auto'
+			  placeholder: 'Type to search',
+
+			  // 支持本地化
+			  placeholder: {
+				'/zh-cn/': '搜索',
+				'/': 'Type to search'
+			  },
+
+			  noData: 'No Results!',
+
+			  // 支持本地化
+			  noData: {
+				'/zh-cn/': '找不到结果',
+				'/': 'No Results'
+			  },
+
+			  // 搜索标题的最大层级, 1 - 6
+			  depth: 2,
+
+			  hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+
+			  // 避免搜索索引冲突
+			  // 同一域下的多个网站之间
+			  namespace: 'website-1',
+
+			  // 使用不同的索引作为路径前缀（namespaces）
+			  // 注意：仅适用于 paths: 'auto' 模式
+			  //
+			  // 初始化索引时，我们从侧边栏查找第一个路径
+			  // 如果它与列表中的前缀匹配，我们将切换到相应的索引
+			  pathNamespaces: ['/zh-cn', '/ru-ru', '/ru-ru/v1'],
+
+			  // 您可以提供一个正则表达式来匹配前缀。在这种情况下，
+			  // 匹配到的字符串将被用来识别索引
+			  pathNamespaces: /^(\/(zh-cn|ru-ru))?(\/(v1|v2))?/
+			}
+		  }
+		*/
+		// 字数统计样式
+		count:{
+			countable:true,
+			fontsize:'0.9em',
+			color:'rgb(90,90,90)',
+			language:'chinese'
+		  }
+		  
+	    /* markdown */
+		
+	}
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <!-- 使用emoji图标 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 全文搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 图片缩放 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 复制到剪贴板 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- 评论系统 -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  
+  <!-- 分页导航 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 字数统计 -->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- 高亮 -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-java.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-xml-doc.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-visual-basic.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-vim.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-swift.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sql.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-shell-session.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-scss.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-sass.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-scala.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ruby.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-regex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-r.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-properties.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-powershell.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-perl.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-pascal.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-nginx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-mongodb.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markup.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-lua.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-less.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-latex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-kotlin.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-js-extras.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-jq.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ini.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-http.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-groovy.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-git.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ftl.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-flow.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-erlang.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-ejs.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-django.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-docker.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-css.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Github Application Client ID',
+    clientSecret: 'Github Application Client Secret',
+    repo: 'Github repo',
+    owner: 'Github repo owner',
+    admin: ['Github repo collaborators, only these guys can initialize github issues'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
+</script>
+</body>
+</html>
