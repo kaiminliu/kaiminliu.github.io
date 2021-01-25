@@ -1,8 +1,8 @@
 <!-- _coverpage.md --> 
 
-<img src="_media/author/author.jpg" alt="logo" style="width:100px;border-radius:50px" />
+<!-- <img src="_media/author/author.jpg" alt="logo" style="width:100px;border-radius:50px" /> -->
 
-
+<img src="https://liuyou-images.oss-cn-hangzhou.aliyuncs.com/markdown/author.jpg" alt="logo" style="width:100px;border-radius:50px" />
 
 # 流柚の博客
 
@@ -14,9 +14,7 @@
 
 
 
-
-
 <!-- 背景图片 ![](_media/bg.png)-->
 
-![](_media/bg.jpg)
+![](https://liuyou-images.oss-cn-hangzhou.aliyuncs.com/markdown/bg.jpg)
 

@@ -25,7 +25,8 @@
     <!-- <a href="#/">EN</a> -->
     <!-- <a href="#/zh-cn/">中文</a> -->
   <!-- </nav> -->
-  <div id="app">加载中...</div>
+  <div id="app"><strong>正在加载中……</strong><br>
+        <p style="font-size:20px">初次加载可能较慢，请耐心等待<br>若长时间无变化请尝试刷新网页</p></div>
   <script>
     window.$docsify = {
       name: '流柚の博客', // 文档标题，会显示在侧边栏顶部。
@@ -53,12 +54,12 @@
 		// 全文搜索
 		search: {
 		  maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-		  paths: [], // or 'auto'
-		  placeholder: '搜索',
-		  noData: '找不到结果',
+		  paths: ['/category/'], // or 'auto'
+		  placeholder: '搜索...',
+		  noData: '未找到结果，换个搜索词试试!!!',
 		  // 搜索标题的最大层级, 1 - 6
 		  depth: 6,
-		  hideOtherSidebarContent: false, // 是否隐藏其他侧边栏内容
+		  hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
 		},
 
 		// 字数统计样式
@@ -67,7 +68,8 @@
 			fontsize:'0.9em',
 			color:'rgb(90,90,90)',
 			language:'chinese'
-		  },
+		  }
+		  ,
 		// valine无后端评论系统
 		Valine: {
               appId: 'ktzz1DlF3dIBzGLWMif56x9q-MdYXbMMI',
@@ -75,7 +77,15 @@
 			  placeholder: '快留下你的小脚丫~~~',
 			  visitor: true, // 文章访问量统计,
 			  recordIP: true, // 记录评论者IP
-		  }		
+		  }
+		  ,
+		// 底部上下篇插件
+        pagination: {
+            previousText: '上一篇',
+            nextText: '下一篇',
+            crossChapter: true,
+            crossChapterText: true,
+        }
 		  <!-- id 将作为查询条件 -->
 			<!-- <span id="<Your/Path/Name>" class="leancloud_visitors" data-flag-title="Your Article Title"> -->
 				<!-- <em class="post-meta-item-text">阅读量 </em> -->
