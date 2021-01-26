@@ -1,3 +1,5 @@
+{docsify-updated}
+
 # markdown语法-docsify篇
 
 在`docsify`博客搭建成功之后，你是否迫不及待的想要写下一篇完整的笔记，但是又不了解`markdown`的语法呢，不必担心，看完这个教程，包你学会\~~~
@@ -347,7 +349,7 @@ cell3 | cell4
 
 :smile:
 
-​
+
 
 12、...
 

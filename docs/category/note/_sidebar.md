@@ -6,9 +6,8 @@
 
     - [Java基础](Java基础.md)
 
-  - 大数据
+  - Redis
+    - [详细笔记](category/note/2020-11-2-Redis详细笔记)
 
-    - [hdfs-读写流程](大数据/HDFS数据读写过程.md)
-
-    
+  
 
